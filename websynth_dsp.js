@@ -394,6 +394,7 @@ var WebSynth = function() {
 };
 
 WebSynth.prototype.play = function(n) {
+	n = parseInt(n, 10); // make sure you have an int
 	this.eg.note_on();
 	this.feg.note_on();
     var f1 = Math.pow(2.0, (this.vco1.oct + n - 4 + this.vco1.fine) / 12.0);
