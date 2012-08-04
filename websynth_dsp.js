@@ -366,6 +366,7 @@ CTL_Filter.prototype.getnode = function() {
 
 ///////////// SYNTH MAIN /////////////////////
 var WebSynth = function() {
+	this.currentNote = -1;
     this.context = new webkitAudioContext();
     this.root = this.context.createJavaScriptNode(stream_length, 1, 2);
 	this.vco1 = new VCO(this.context.sampleRate);
@@ -392,6 +393,16 @@ var WebSynth = function() {
 */
 
 };
+
+WebSynth.prototype.getPlayingNote = function()
+{
+	return this.currentNote;
+}
+
+WebSynth.prototype.setPlayingNote = function(note)
+{
+	this.currentNote = note;
+}
 
 WebSynth.prototype.play = function(n) {
 	n = parseInt(n, 10); // make sure you have an int
