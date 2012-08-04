@@ -50,10 +50,11 @@ $(function() {
 	// knob
 	$('<img />').knob({
 		id: 'knob01', image: 'images/knob01.png',
-		left: 60, top: 142, width: 48, height: 48, value: 10,
+		left: 60, top: 142, width: 48, height: 48, value: 10, min: 1, max: 20,
 		change: (function() {
-			p.vco1.set_glide_time($(this).knob("value"));
-			p.vco2.set_glide_time($(this).knob("value"));
+			var value = Math.round($(this).knob("value"));
+			p.vco1.set_glide_time(value);
+			p.vco2.set_glide_time(value);
 		})
 	}).appendTo('#draw');
 
