@@ -132,6 +132,7 @@ $.widget("jqskin.knob", $.ui.mouse, {
 			if ((v >= o.min) && (v <= o.max)) {
 				o.value = v;
 				this._update();
+				this._trigger("change");
 			}
 			return;
 		}

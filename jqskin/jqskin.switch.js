@@ -75,6 +75,7 @@ $.widget("jqskin.switch", $.ui.mouse, {
 			if ((v >= 0) && (v <= 1)) {
 				o.value = v;
 				this._update();
+				this._trigger("click");
 			}
 			return;
 		}
