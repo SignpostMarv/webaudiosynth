@@ -121,7 +121,8 @@ $(function() {
 					seq_note_on(down_key_stack[down_key_stack.length-2]);
 				}
 			}
-			down_key_stack.splice(down_key_stack.indexOf(note));
+			down_key_stack.splice(down_key_stack.indexOf(note), 1);
+			$('#key_' + note).keypad("value", 0);
 		}
 		//super failsafe
 		if (down_key_stack.length == 0)
