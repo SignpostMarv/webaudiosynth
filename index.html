@@ -16,9 +16,10 @@
 
 	<style>
 	body { background-color: #999999; }
-	#draw { height: 2000px; }
+	#draw { height: 500px; }
 	.block div { margin-right: 15px; float: left; }
 	#about {width: 240px; }
+	#dump { display: none; }
 	</style>
 
 	<script src="websynth_gui.js"></script>
@@ -37,16 +38,22 @@
 	</div>
 
 	<div id="draw"></div>
-	<div>
-		<button id="dump" name="dump" value="Dump" />
+	<div id="dump">
+		<button id="dump" name="dump">Dump patch JSON</button>
 	</div>
+	<div>
+	<p>Select patch:</p>
 	<select id="patch" name="patch">
 		<option value="brass_1">Brass</option>
-		<option selected="selected" value="buzz_lead">Buzz</option>
-		<option value="soft_lead">Soft Lead</option>
-		<option value="dirty_bass">Dirty Bass</option>
+		<option selected="selected" value="buzz_lead">Buzz Lead</option>
 		<option value="clean_bass">Clean Bass</option>
+		<option value="dirty_bass">Dirty Bass</option>
+		<option value="glass_harmonica">Glass Harmonica</option>
+		<option value="soft_lead">Soft Lead</option>
+		<option value="space">Space Pad</option>
 		<option value="synth_brass">Synth Brass</option>
+		<option value="string">Synth String</option>
 	</select>
+	</div>
 </body>
 </html>
