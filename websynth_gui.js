@@ -22,279 +22,30 @@ $(function() {
 	var sx = 22;
 	var n = 0;
 
-	$('<img />').keypad({
-		id: 'key_0',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(0);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_2',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(2);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_4',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(4);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_6',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(6);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_7',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(7);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_9',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(9);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_11',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(11);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_12',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(12);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_14',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(14);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_16',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(16);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_18',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(18);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_19',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(19);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_21',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(21);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_23',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(23);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_24',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(24);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_26',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(26);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_28',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(28);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_30',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(30);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_31',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(31);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_33',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(33);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_35',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(35);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_36',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(36);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_38',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(38);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_40',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(40);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_42',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(42);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_43',
-		image: 'images/key_white.png', left: x + sx * n, top: y, width: 22, height: 112,
-		mousedown: (function() {p.play(43);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-
+	var white_keys = [0,2,4,6,7,9,11,12,14,16,18,19,21,23,24,26,28,30,31,33,35,36,38,40,42,43];
+	for (var i = 0; i < white_keys.length; i++)
+	{
+		$('<img />').keypad({
+			id: 'key_' + white_keys[i],
+			image: 'images/key_white.png', left: x + sx * i, top: y, width: 22, height: 112, note: white_keys[i],
+			mousedown: (function(){p.play(this.id.split("_")[1]);}), mouseup:   (function() {p.stop();})
+		}).appendTo('#draw');
+	}
 
 	x = 124;
 	n = 0;
 
-	$('<img />').keypad({
-		id: 'key_1',
-		image: 'images/key_black.png', left: x + sx * n, top: y, width: 12, height: 64,
-		mousedown: (function() {p.play(1);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_3',
-		image: 'images/key_black.png', left: x + sx * n, top: y, width: 12, height: 64,
-		mousedown: (function() {p.play(3);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_5',
-		image: 'images/key_black.png', left: x + sx * n, top: y, width: 12, height: 64,
-		mousedown: (function() {p.play(5);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n += 2;
-
-	$('<img />').keypad({
-		id: 'key_8',
-		image: 'images/key_black.png', left: x + sx * n, top: y, width: 12, height: 64,
-		mousedown: (function() {p.play(8);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_10',
-		image: 'images/key_black.png', left: x + sx * n, top: y, width: 12, height: 64,
-		mousedown: (function() {p.play(10);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n += 2;
-	$('<img />').keypad({
-		id: 'key_13',
-		image: 'images/key_black.png', left: x + sx * n, top: y, width: 12, height: 64,
-		mousedown: (function() {p.play(13);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_15',
-		image: 'images/key_black.png', left: x + sx * n, top: y, width: 12, height: 64,
-		mousedown: (function() {p.play(15);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_17',
-		image: 'images/key_black.png', left: x + sx * n, top: y, width: 12, height: 64,
-		mousedown: (function() {p.play(17);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n += 2;
-
-	$('<img />').keypad({
-		id: 'key_20',
-		image: 'images/key_black.png', left: x + sx * n, top: y, width: 12, height: 64,
-		mousedown: (function() {p.play(20);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_22',
-		image: 'images/key_black.png', left: x + sx * n, top: y, width: 12, height: 64,
-		mousedown: (function() {p.play(22);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n += 2;
-	$('<img />').keypad({
-		id: 'key_25',
-		image: 'images/key_black.png', left: x + sx * n, top: y, width: 12, height: 64,
-		mousedown: (function() {p.play(25);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_27',
-		image: 'images/key_black.png', left: x + sx * n, top: y, width: 12, height: 64,
-		mousedown: (function() {p.play(27);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_29',
-		image: 'images/key_black.png', left: x + sx * n, top: y, width: 12, height: 64,
-		mousedown: (function() {p.play(29);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n += 2;
-
-	$('<img />').keypad({
-		id: 'key_32',
-		image: 'images/key_black.png', left: x + sx * n, top: y, width: 12, height: 64,
-		mousedown: (function() {p.play(32);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_34',
-		image: 'images/key_black.png', left: x + sx * n, top: y, width: 12, height: 64,
-		mousedown: (function() {p.play(34);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n += 2;
-	$('<img />').keypad({
-		id: 'key_37',
-		image: 'images/key_black.png', left: x + sx * n, top: y, width: 12, height: 64,
-		mousedown: (function() {p.play(37);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_39',
-		image: 'images/key_black.png', left: x + sx * n, top: y, width: 12, height: 64,
-		mousedown: (function() {p.play(39);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-	$('<img />').keypad({
-		id: 'key_41',
-		image: 'images/key_black.png', left: x + sx * n, top: y, width: 12, height: 64,
-		mousedown: (function() {p.play(41);}), mouseup:   (function() {p.stop();})
-	}).appendTo('#draw');
-	n++;
-
+	var black_key_spaces = [1,1,2,1,2]; // modulo this to get spacing for black keys
+	var black_keys = [1,3,5,8,10,13,15,17,20,22,25,27,29,32,34,37,39,41];
+	for (var i = 0; i < black_keys.length; i++)
+	{
+		$('<img />').keypad({
+			id: 'key_' + black_keys[i],
+			image: 'images/key_black.png', left: x + sx * n, top: y, width: 12, height: 64,
+			mousedown: (function() {p.play(this.id.split("_")[1]);}), mouseup:   (function() {p.stop();})
+		}).appendTo('#draw');
+		n += black_key_spaces[i % black_key_spaces.length];
+	}
 
 	// knob
 	$('<img />').knob({
