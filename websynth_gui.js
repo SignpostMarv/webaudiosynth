@@ -94,13 +94,13 @@ $(function() {
 	}).appendTo('#draw');
 
 	$('<img />').knob({
-		id: 'knob05.5', image: 'images/knob02.png',
+		id: 'knob05_5', image: 'images/knob02.png',
 		left: 260, top: 125, width: 40, height: 40, flames: 3, value: 50, sense: 100,
 		change: (function() { p.vco1.set_wave($(this).knob("value"));} )
 	}).appendTo('#draw');
 
 	$('<img />').knob({
-		id: 'knob05.6', image: 'images/knob02.png',
+		id: 'knob05_6', image: 'images/knob02.png',
 		left: 260, top: 208, width: 40, height: 40, flames: 3, value: 50, sense: 100,
 		change: (function() { p.vco2.set_wave($(this).knob("value"));} )
 	}).appendTo('#draw');
@@ -132,19 +132,19 @@ $(function() {
 
 
 	$('<img />').knob({
-		id: 'knob07.5', image: 'images/knob01.png',
+		id: 'knob07_5', image: 'images/knob01.png',
 		left: 423, top: 100, width: 48, height: 48, value: 50,
 		change: (function() { p.filter.set_freq($(this).knob("value"));} )
 	}).appendTo('#draw');
 
 	$('<img />').knob({
-		id: 'knob07.6', image: 'images/knob01.png',
+		id: 'knob07_6', image: 'images/knob01.png',
 		left: 480, top: 100, width: 48, height: 48, value: 50,
 		change: (function() { p.filter.set_q($(this).knob("value"));} )
 	}).appendTo('#draw');
 
 	$('<img />').knob({
-		id: 'knob07.7', image: 'images/knob01.png',
+		id: 'knob07_7', image: 'images/knob01.png',
 		left: 537, top: 100, width: 48, height: 48, value: 50,
 		change: (function() { p.filter.set_amount($(this).knob("value"));} )
 	}).appendTo('#draw');
