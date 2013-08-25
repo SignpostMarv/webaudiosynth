@@ -6,16 +6,6 @@
  *
  */
 
-///////////// BROWSER CHECK /////////////////////
-window.addEventListener('load', init, false);
-function init() {
-	try {
-		var context = new webkitAudioContext();
-	} catch(e) {
-		alert('Web Audio API is not supported in this browser');
-	}
-};
-
 ///////////// GLIDE /////////////////////
 var Glide = function() {
 	this.time  = 10;
@@ -367,7 +357,12 @@ CTL_Filter.prototype.getnode = function() {
 ///////////// SYNTH MAIN /////////////////////
 var WebSynth = function() {
 	this.currentNote = -1;
-    this.context = new webkitAudioContext();
+///////////// BROWSER CHECK /////////////////////
+	try{
+		this.context = new webkitAudioContext();
+	}catch(e){
+		throw new Error('Web Audio API is not supported in this browser');
+	}
     this.root = this.context.createJavaScriptNode(stream_length, 1, 2);
 	this.vco1 = new VCO(this.context.sampleRate);
 	this.vco2 = new VCO(this.context.sampleRate);
