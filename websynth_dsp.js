@@ -405,7 +405,7 @@ WebSynth.prototype.playFrequency = function(f){
 }
 
 WebSynth.prototype.play = function(n) {
-	n = parseInt(n, 10); // make sure you have an int
+	n = parseFloat(n); // make sure you have a float
 	this.eg.note_on();
 	this.feg.note_on();
     var f1 = Math.pow(2.0, (this.vco1.oct + n - 4 + this.vco1.fine) / 12.0);
