@@ -359,7 +359,7 @@ var WebSynth = function() {
 	this.currentNote = -1;
 ///////////// BROWSER CHECK /////////////////////
 	try{
-		this.context = new webkitAudioContext();
+		this.context = window.AudioContext ? new AudioContext() : new webkitAudioContext();
 	}catch(e){
 		throw new Error('Web Audio API is not supported in this browser');
 	}
