@@ -441,6 +441,3 @@ WebSynth.prototype.stop = function() {
 	this.eg.note_off();
 	this.feg.note_off();
 };
-
-var p = new WebSynth();
-
