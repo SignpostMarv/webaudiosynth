@@ -399,6 +399,11 @@ WebSynth.prototype.setPlayingNote = function(note)
 	this.currentNote = note;
 }
 
+WebSynth.prototype.playFrequency = function(f){
+	f = parseFloat(f); // make sure you have a float
+	this.play(12 * (Math.log(f / 440.0) / Math.log(2)) + 49);
+}
+
 WebSynth.prototype.play = function(n) {
 	n = parseInt(n, 10); // make sure you have an int
 	this.eg.note_on();
