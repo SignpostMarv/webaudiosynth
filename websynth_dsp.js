@@ -6,6 +6,57 @@
  *
  */
 
+
+var
+	audioContextFuncs = [
+		'webkitAudioContext',
+		'AudioContext',
+	],
+	cSP_funcs = [
+		'createJavaScriptNode',
+		'createScriptProcessor'
+	],
+	cG_funcs = [
+		'createGainNode',
+		'createGain',
+	],
+	cD_funcs = [
+		'createDelayNode',
+		'createDelay',
+	],
+	i=0|0,
+	audioContextFunc = audioContextFuncs[i],
+	createScriptProcessorFunc = cSP_funcs[i],
+	createGainFunc = cG_funcs[i],
+	createDelayFunc = cD_funcs[i]
+;
+for(i=0;i<audioContextFuncs.length;++i){
+	if(audioContextFuncs[i] in window){
+		audioContextFunc = audioContextFuncs[i];
+		break;
+	}
+}
+if(audioContextFunc in window){
+	for(i=0;i<cSP_funcs.length;++i){
+		if(cSP_funcs[i] in window[audioContextFunc].prototype){
+			createScriptProcessorFunc = cSP_funcs[i];
+			break;
+		}
+	}
+	for(i=0;i<cG_funcs.length;++i){
+		if(cG_funcs[i] in window[audioContextFunc].prototype){
+			createGainFunc = cG_funcs[i];
+			break;
+		}
+	}
+	for(i=0;i<cD_funcs.length;++i){
+		if(cD_funcs[i] in window[audioContextFunc].prototype){
+			createDelayFunc = cD_funcs[i];
+			break;
+		}
+	}
+}
+
 ///////////// GLIDE /////////////////////
 var Glide = function() {
 	this.time  = 10;
@@ -256,7 +307,7 @@ EG.prototype.next = function() {
 
 ///////////// VOLUME /////////////////////
 var CTL_Volume = function(ctx) {
-	this.volume = ctx.createGainNode();
+	this.volume = ctx[createGainFunc]();
     this.volume.gain.value = 0.5;
 };
 
@@ -276,10 +327,10 @@ CTL_Volume.prototype.getnode = function() {
 var FX_Delay = function(ctx) {
 	this.wet = 0.2;
 	this.delaytime = 0.8;
-    this.delay1 = ctx.createDelayNode();
-    this.delay2 = ctx.createDelayNode();
-	this.gain1 = ctx.createGainNode();
-	this.gain2 = ctx.createGainNode();
+    this.delay1 = ctx[createDelayFunc]();
+    this.delay2 = ctx[createDelayFunc]();
+	this.gain1 = ctx[createGainFunc]();
+	this.gain2 = ctx[createGainFunc]();
 
     this.delay1.delayTime.value = this.delaytime * 0.5;
     this.delay2.delayTime.value = this.delaytime * 1.0;
@@ -359,11 +410,11 @@ var WebSynth = function() {
 	this.currentNote = -1;
 ///////////// BROWSER CHECK /////////////////////
 	try{
-		this.context = window.AudioContext ? new AudioContext() : new webkitAudioContext();
+		this.context = new window[audioContextFunc];
 	}catch(e){
 		throw new Error('Web Audio API is not supported in this browser');
 	}
-    this.root = this.context.createJavaScriptNode(stream_length, 1, 2);
+    this.root = this.context[createScriptProcessorFunc](stream_length, 1, 2);
 	this.vco1 = new VCO(this.context.sampleRate);
 	this.vco2 = new VCO(this.context.sampleRate);
 	this.eg = new EG();
